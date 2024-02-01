@@ -1,4 +1,4 @@
-package com.algaworks.example.order.config;
+package com.algaworks.example.order.config.rabbitmq;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;

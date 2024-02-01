@@ -89,4 +89,8 @@ public class OutboxMessage {
 		this.tentatives = tentatives;
 	}
 
+	public void increaseTentatives() {
+		this.tentatives++;
+	}
+
 }

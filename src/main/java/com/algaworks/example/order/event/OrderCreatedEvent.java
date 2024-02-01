@@ -1,33 +1,33 @@
 package com.algaworks.example.order.event;
 
-import com.algaworks.example.order.model.OrderModel;
+import java.math.BigDecimal;
 
-import java.time.OffsetDateTime;
 
 public class OrderCreatedEvent {
-    private OffsetDateTime date = OffsetDateTime.now();
-    private OrderModel order;
+    private Long id;
+    private BigDecimal value = BigDecimal.ZERO;
 
     public OrderCreatedEvent() {
     }
 
-    public OrderCreatedEvent(OrderModel order) {
-        this.order = order;
+    public OrderCreatedEvent(Long id, BigDecimal value) {
+        this.id = id;
+        this.value = value;
     }
 
-    public OffsetDateTime getDate() {
-        return date;
+    public Long getId() {
+        return id;
     }
 
-    public void setDate(OffsetDateTime date) {
-        this.date = date;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public OrderModel getOrder() {
-        return order;
+    public BigDecimal getValue() {
+        return value;
     }
 
-    public void setOrder(OrderModel order) {
-        this.order = order;
+    public void setValue(BigDecimal value) {
+        this.value = value;
     }
 }
